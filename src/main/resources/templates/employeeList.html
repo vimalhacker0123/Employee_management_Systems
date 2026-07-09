@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+
+<head>
+
+<meta charset="UTF-8">
+
+<title>Employee List</title>
+
+<link rel="stylesheet" th:href="@{/css/style.css}">
+
+<script th:src="@{/js/script.js}"></script>
+
+</head>
+
+
+
+<body>
+
+
+<!-- Common Header -->
+
+<div th:replace="~{fragments/header :: header}"></div>
+
+
+
+
+<div class="content">
+
+
+<div class="table-card">
+
+
+<h2>
+<i class="fas fa-users"></i>
+Employee List
+</h2>
+
+
+
+<div class="search-box">
+
+
+<form th:action="@{/employees/search/name}"
+      method="get">
+
+
+<input type="text"
+       name="keyword"
+       placeholder="Search Name">
+
+
+<button>
+Search
+</button>
+
+
+</form>
+
+
+
+
+<form th:action="@{/employees/search/department}"
+      method="get">
+
+
+<input type="text"
+       name="department"
+       placeholder="Search Department">
+
+
+<button>
+Search
+</button>
+
+
+</form>
+
+
+</div>
+
+
+
+
+
+<table>
+
+
+<thead>
+
+<tr>
+
+<th>ID</th>
+<th>Name</th>
+<th>Email</th>
+<th>Phone</th>
+<th>Department</th>
+<th>Designation</th>
+<th>Salary</th>
+<th>Date</th>
+<th>Status</th>
+<th>Action</th>
+
+</tr>
+
+</thead>
+
+
+
+<tbody>
+
+
+<tr th:each="emp : ${employees}">
+
+
+<td th:text="${emp.employeeId}"></td>
+
+<td th:text="${emp.name}"></td>
+
+<td th:text="${emp.email}"></td>
+
+<td th:text="${emp.phone}"></td>
+
+<td th:text="${emp.department}"></td>
+
+<td th:text="${emp.designation}"></td>
+
+<td th:text="${emp.salary}"></td>
+
+<td th:text="${emp.joiningDate}"></td>
+
+<td th:text="${emp.status}"></td>
+
+
+
+<td>
+
+
+<a th:href="@{'/employees/edit/' + ${emp.employeeId}}">
+
+<button class="edit">
+Edit
+</button>
+
+</a>
+
+
+
+<a th:href="@{'/employees/delete/' + ${emp.employeeId}}"
+onclick="return confirmDelete();">
+
+
+<button class="delete">
+Delete
+</button>
+
+
+</a>
+
+
+</td>
+
+
+
+</tr>
+
+
+</tbody>
+
+
+</table>
+
+
+
+
+
+<div class="pagination"
+     th:if="${currentPage!=null}">
+
+
+Page
+
+<span th:text="${currentPage}">
+</span>
+
+
+of
+
+<span th:text="${totalPages}">
+</span>
+
+
+</div>
+
+
+
+</div>
+
+
+</div>
+
+
+
+</body>
+
+</html>

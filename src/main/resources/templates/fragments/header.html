@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<body>
+
+<div th:fragment="header">
+
+
+<nav class="navbar">
+
+
+    <div class="logo">
+        <i class="fas fa-users"></i>
+        Employee Management System
+    </div>
+
+
+    <div class="menu">
+
+        <a th:href="@{/employees/dashboard}">
+            Dashboard
+        </a>
+
+
+        <a th:href="@{/employees/add}">
+            Add Employee
+        </a>
+
+
+        <a th:href="@{/employees/list}">
+            Employees
+        </a>
+
+
+        <a th:href="@{/employees/export}">
+            Export CSV
+        </a>
+
+
+    </div>
+
+
+    <div class="admin">
+
+        <i class="fas fa-user-circle"></i>
+        Admin
+
+
+     <form th:action="@{/logout}" method="post">
+
+            <button class="logout-btn">
+
+                <i class="fas fa-sign-out-alt"></i>
+                Logout
+
+            </button>
+
+        </form>
+
+
+    </div>
+
+
+</nav>
+
+
+</div>
+
+</body>
+
+</html>

@@ -1,0 +1,756 @@
+/* ==========================
+   GLOBAL
+========================== */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Segoe UI', Arial, sans-serif;
+}
+
+
+body{
+
+    background:#f1f5f9;
+    color:#1e293b;
+
+}
+
+
+a{
+
+    text-decoration:none;
+
+}
+
+
+
+/* ==========================
+   LOGIN PAGE
+========================== */
+
+
+.login-box{
+
+    width:380px;
+
+    margin:120px auto;
+
+    background:white;
+
+    padding:35px;
+
+    border-radius:15px;
+
+    box-shadow:0 10px 25px rgba(0,0,0,.15);
+
+}
+
+
+.login-box h2{
+
+    text-align:center;
+
+    margin-bottom:25px;
+
+    color:#1e3a8a;
+
+}
+
+
+
+
+/* ==========================
+   COMMON INPUT
+========================== */
+
+
+input,
+select{
+
+    width:100%;
+
+    padding:12px;
+
+    margin-top:8px;
+
+    margin-bottom:15px;
+
+    border:1px solid #ccc;
+
+    border-radius:8px;
+
+}
+
+
+
+/* ==========================
+   BUTTON
+========================== */
+
+
+button{
+
+    background:#2563eb;
+
+    color:white;
+
+    padding:10px 18px;
+
+    border:none;
+
+    border-radius:6px;
+
+    cursor:pointer;
+
+}
+
+
+button:hover{
+
+    background:#1d4ed8;
+
+}
+
+
+
+
+/* ==========================
+   FIXED HEADER
+========================== */
+
+
+.navbar{
+
+
+    height:70px;
+
+    background:#1e3a8a;
+
+    color:white;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:space-between;
+
+    padding:0 30px;
+
+    position:fixed;
+
+    top:0;
+
+    width:100%;
+
+    z-index:1000;
+
+
+}
+
+
+
+.logo{
+
+    font-size:22px;
+
+    font-weight:bold;
+
+}
+
+
+
+.menu{
+
+    display:flex;
+    align-items:center;
+    gap:10px;
+
+}
+
+.menu a{
+
+    color:white;
+    text-decoration:none;
+    font-size:16px;
+    font-weight:600;
+    padding:10px 18px;
+    border-radius:8px;
+    transition:all 0.3s ease;
+
+}
+
+.menu a:hover{
+
+    background:#ffffff;
+    color:#1e3a8a;
+    transform:translateY(-2px);
+    box-shadow:0 4px 10px rgba(0,0,0,0.2);
+
+}
+
+.menu a.active{
+
+    background:#facc15;
+    color:#1e3a8a;
+}
+
+
+.admin{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:15px;
+
+}
+
+
+
+.admin a{
+
+    background:#dc2626;
+
+    color:white;
+
+    padding:8px 15px;
+
+    border-radius:6px;
+
+}
+
+
+
+/* ==========================
+   PAGE CONTENT
+========================== */
+
+
+.content{
+
+    padding-top:110px;
+
+    display:flex;
+
+    justify-content:center;
+
+}
+
+
+
+
+/* ==========================
+   DASHBOARD
+========================== */
+
+
+.content{
+
+    min-height:100vh;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    background:#f1f5f9;
+
+    padding-top:70px;
+
+}
+
+
+
+.dashboard-card{
+
+    width:500px;
+
+    background:white;
+
+    padding:40px;
+
+    text-align:center;
+
+    border-radius:15px;
+
+    box-shadow:0 10px 25px rgba(0,0,0,.15);
+
+}
+
+
+
+.icon{
+
+    font-size:60px;
+
+    color:#2563eb;
+
+}
+
+
+
+.dashboard-header h1{
+
+    color:#1e293b;
+
+    margin-top:15px;
+
+}
+
+
+
+.dashboard-header p{
+
+    color:#64748b;
+
+}
+
+
+
+.cards{
+
+    display:flex;
+
+    gap:20px;
+
+    margin-top:30px;
+
+}
+
+
+
+.box{
+
+    flex:1;
+
+    color:white;
+
+    padding:25px;
+
+    border-radius:10px;
+
+}
+
+
+
+.total{
+
+    background:#2563eb;
+
+}
+
+
+.active{
+
+    background:#16a34a;
+
+}
+
+
+
+.box h2{
+
+    font-size:35px;
+
+    margin:10px 0;
+
+}
+
+
+
+.box p{
+
+    font-size:16px;
+
+}
+
+
+
+
+/* ==========================
+   ADD EMPLOYEE FORM
+========================== */
+
+
+.form-card{
+
+
+    width:500px;
+
+    background:white;
+
+    padding:35px;
+
+    border-radius:15px;
+
+    box-shadow:0 10px 25px rgba(0,0,0,.15);
+
+
+}
+
+
+
+.form-card h2{
+
+    margin-bottom:20px;
+
+}
+
+
+
+.save-btn{
+
+    background:#16a34a;
+
+    width:100%;
+
+    font-size:16px;
+
+}
+
+
+
+.save-btn:hover{
+
+    background:#15803d;
+
+}
+
+
+
+
+
+/* ==========================
+   EMPLOYEE TABLE
+========================== */
+
+
+.table-card{
+
+    width:95%;
+
+    background:white;
+
+    padding:30px;
+
+    border-radius:15px;
+
+    box-shadow:0 10px 25px rgba(0,0,0,.15);
+
+}
+
+
+
+table{
+
+    width:100%;
+
+    border-collapse:collapse;
+
+    margin-top:20px;
+
+}
+
+
+
+th{
+
+    background:#1e3a8a;
+
+    color:white;
+
+}
+
+
+th,
+td{
+
+    padding:12px;
+
+    border:1px solid #ddd;
+
+    text-align:center;
+
+}
+
+
+
+.edit{
+
+    background:#2563eb;
+
+}
+
+
+
+.delete{
+
+    background:#dc2626;
+
+}
+
+
+
+.edit:hover{
+
+    background:#1d4ed8;
+
+}
+
+
+.delete:hover{
+
+    background:#b91c1c;
+
+}
+
+
+
+
+/* ==========================
+   RESPONSIVE
+========================== */
+
+
+@media(max-width:700px){
+
+
+    .navbar{
+
+        flex-direction:column;
+
+        height:auto;
+
+        padding:15px;
+
+    }
+
+
+    .menu{
+
+        margin:15px;
+
+    }
+
+
+    .content{
+
+        padding:130px 15px 20px;
+
+    }
+
+
+    .dashboard-card,
+    .form-card{
+
+        width:100%;
+
+    }
+
+
+    table{
+
+        font-size:12px;
+
+    }
+
+
+}
+
+
+
+
+
+
+.dashboard-header{
+
+    text-align:center;
+
+}
+
+
+.dashboard-header h1{
+
+    margin-top:15px;
+
+}
+
+
+.dashboard-header p{
+
+    color:#64748b;
+
+}
+
+
+
+.box{
+
+    text-align:center;
+
+}
+
+
+
+.box i{
+
+    font-size:30px;
+
+    margin-bottom:10px;
+
+}
+
+
+
+.total{
+
+    background:#2563eb;
+
+}
+
+
+
+.active{
+
+    background:#16a34a;
+
+}
+
+
+
+
+
+
+.form-card{
+
+    width:550px;
+
+    background:white;
+
+    padding:35px;
+
+    border-radius:15px;
+
+    box-shadow:0 10px 25px rgba(0,0,0,.15);
+
+}
+
+
+
+.form-header{
+
+    text-align:center;
+
+    margin-bottom:25px;
+
+}
+
+
+
+.form-header i{
+
+    font-size:50px;
+
+    color:#2563eb;
+
+}
+
+
+
+.form-header h2{
+
+    margin:10px;
+
+}
+
+
+
+.form-header p{
+
+    color:#64748b;
+
+}
+
+
+
+.form-card label{
+
+    display:block;
+
+    margin-bottom:5px;
+
+    font-weight:600;
+
+}
+
+
+
+.form-card input,
+.form-card select{
+
+    width:100%;
+
+    padding:12px;
+
+    margin-bottom:18px;
+
+    border-radius:8px;
+
+    border:1px solid #ccc;
+
+}
+
+
+
+.form-buttons{
+
+    display:flex;
+
+    gap:15px;
+
+    margin-top:20px;
+
+}
+
+
+
+.update-btn{
+
+    background:#2563eb;
+
+    flex:1;
+
+}
+
+
+
+.cancel-btn{
+
+    background:#64748b;
+
+    color:white;
+
+    padding:12px 20px;
+
+    border-radius:8px;
+
+}
+
+
+
+.update-btn:hover{
+
+    background:#1d4ed8;
+
+}
+
+
+
+
+
+
+
+
